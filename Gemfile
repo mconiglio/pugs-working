@@ -5,6 +5,12 @@ source 'https://rubygems.org'
 gem 'rails', '4.2.4'
 # Use sqlite3 as the database for Active Recordb
 
+gem 'forem', :github => "radar/forem", :branch => "rails4"
+gem 'kaminari'
+gem 'devise'
+gem 'pundit'
+gem 'geocoder'
+
 group :development, :test do
   gem 'sqlite3'
   gem 'byebug'
