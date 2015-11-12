@@ -7,6 +7,8 @@ gem 'rails', '4.2.4'
 gem 'omniauth-facebook'
 gem 'omniauth-twitter'
 
+gem 'activerecord-session_store', github: 'rails/activerecord-session_store'
+
 gem 'forem', :github => "radar/forem", :branch => "rails4"
 gem 'kaminari'
 gem 'devise'

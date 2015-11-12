@@ -7,8 +7,7 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-<%= link_to "Sign in with Facebook", user_omniauth_authorize_path(:facebook) %>
-<%= link_to "Sign in with Twitter", user_omniauth_authorize_path(:twitter) %>
+  <%= link_to "log_out", destroy_user_session_path, method: 'delete' %>
 <%= yield %>
 
 </body>
