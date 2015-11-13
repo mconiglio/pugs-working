@@ -12,7 +12,7 @@ Devise.setup do |config|
   # Configure the e-mail address which will be shown in Devise::Mailer,
   # note that it will be overwritten if you use your own mailer class
   # with default "from" parameter.
-  config.mailer_sender = 'astjuste423@gmail.com'
+  config.mailer_sender = "PugsApp"
 
   # Configure the class responsible to send e-mails.
   # config.mailer = 'Devise::Mailer'
@@ -236,8 +236,8 @@ Devise.setup do |config|
   # Add a new OmniAuth provider. Check the wiki for more information on setting
   # up on your models and hooks.
   # config.omniauth :github, 'APP_ID', 'APP_SECRET', scope: 'user,public_repo'
-  config.omniauth :facebook, "1504047866562116", "382897009840f0c84b3a7236a8ac5a48", scope: 'email', info_fields: 'email, name', :secure_image_url => 'true', :image_size => 'normal'
-  config.omniauth :twitter, "JUVdFONdsVmTSTZsJBqbrLJA6", "0ml43HxsI1Pnd9nIrf17fiG9YCxUJqpo6uGnou9coG1LLVddP7", :secure_image_url => 'true', :image_size => 'orignal'
+  config.omniauth :facebook, ENV["FB_TEST_ID_SECRET"], ENV["FB_TEST_SECRET"], scope: 'email', info_fields: 'email, name', :secure_image_url => 'true', :image_size => 'normal'
+  config.omniauth :twitter, ENV["TWIT_ID"], ENV["TWIT_SECRET"], :secure_image_url => 'true', :image_size => 'orignal'
   # ==> Warden configuration
   # If you want to use other strategies, that are not supported by Devise, or
   # change the failure app, you can configure them inside the config.warden block.

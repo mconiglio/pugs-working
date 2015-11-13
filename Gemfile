@@ -26,7 +26,7 @@ group :development, :test do
   gem 'capybara'
   gem 'launchy'
   gem 'rspec-rails'
-  gem 'foreman'
+  gem 'figaro'
 end
 
 group :test do
