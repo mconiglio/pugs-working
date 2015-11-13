@@ -10,6 +10,9 @@ gem 'omniauth-twitter'
 gem 'activerecord-session_store', github: 'rails/activerecord-session_store'
 
 gem 'forem', :github => "radar/forem", :branch => "rails4"
+gem 'forem-bootstrap', github: "radar/forem-bootstrap"
+gem 'forem-redcarpet', github: "radar/forem-redcarpet"
+
 gem 'kaminari'
 gem 'devise'
 gem 'pundit'
@@ -18,6 +21,7 @@ gem 'geocoder'
 group :development, :test do
   gem 'sqlite3'
   #gem 'byebug'
+  gem 'mailcatcher'
   gem 'database_cleaner'
   gem 'capybara'
   gem 'launchy'

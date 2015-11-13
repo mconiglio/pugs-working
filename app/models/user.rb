@@ -4,8 +4,16 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable, :confirmable,
          :recoverable, :rememberable, :trackable, :validatable, :omniauthable,
          :omniauth_providers => [:facebook, :twitter]
-         
+=begin     
+    geocoded_by :ip_address,
+    :latitude => :lat, :longitude => :lon
+    after_validation :geocode
+    
+    reverse_geocoded_by :lat, :lon
+    after_validation :reverse_geocode  # auto-fetch address
+=end
   validates_format_of :email, :without => Devise.email_regexp, on: :update
+
 
     def self.from_omniauth(auth)
       where(provider: auth.provider, uid: auth.uid).first_or_create do |user|
@@ -23,4 +31,9 @@ class User < ActiveRecord::Base
       end
     end
   end
+  
+  def forem_name
+    name
+  end
+
 end
