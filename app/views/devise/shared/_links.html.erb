@@ -23,3 +23,5 @@
     <%= link_to "Sign in with #{provider.to_s.titleize}", user_omniauth_authorize_path(provider) %><br />
   <% end -%>
 <% end -%>
+
+<%= link_to('Logout', destroy_user_session_path, :method => :delete) %>   
