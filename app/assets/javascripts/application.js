@@ -12,5 +12,11 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require turbolinks
+//= require bootstrap
+//= require jquery.datetimepicker.min
 //= require_tree .
+
+$(document).ready(function(){
+  $("#post_when").datetimepicker({
+    format:'Y/m/d H:i'
+  });
