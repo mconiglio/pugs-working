@@ -1,0 +1,50 @@
+<% title "PUGS" %>
+
+<br>
+<footer id='admin_link'>
+  <% if forem_admin? %>
+    <%= link_to t("area", :scope => "forem.admin"), forem.admin_root_path %>
+  <% end %>
+</footer>
+
+
+
+
+  <!-- Static navbar -->
+    <div class="navbar navbar-inverse navbar-static-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+            <div id='forums_container'>
+    <h1 id='forums_title'><%= yield(:title) %></h1>
+    <%= link_to('Logout', main_app.destroy_user_session_path, :method => :delete) %>   
+    <%= render @categories %>
+  </div>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="work.html">APPLICATION</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+	<!-- +++++ Welcome Section +++++ -->
+	<div id="ww">
+	    <div class="container">
+			<div class="row">
+				<div class="col-lg-8 col-lg-offset-2 centered">
+					<h1>Table</h1>
+					<p><%= render @categories %></p>
+				
+				</div><!-- /col-lg-8 -->
+			</div><!-- /row -->
+	    </div> <!-- /container -->
+	</div><!-- /ww -->

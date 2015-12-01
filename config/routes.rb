@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   #
   # We ask that you don't use the :as option here, as Forem relies on it being the default of "forem"
   mount Forem::Engine, :at => '/'
-  root to: 'pages#home'
+  #root to: 'pages#home'
   devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" ,
   registrations: 'users/registrations', passwords: 'users/passwords'}
 
@@ -15,7 +15,7 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  # root 'welcome#index'
+   root 'pages#home'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
