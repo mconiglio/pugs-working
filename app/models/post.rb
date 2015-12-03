@@ -13,10 +13,10 @@ class Post < ActiveRecord::Base
 
   mount_uploader :attachment, AvatarUploader
 
-  validates_presence_of :content
   validates_presence_of :user
-validates_presence_of :name
+  validates_presence_of :name
   validates_presence_of :when
+  
   auto_html_for :content do
     html_escape
     image

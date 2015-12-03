@@ -5,6 +5,6 @@ class User < ActiveRecord::Base
   acts_as_followable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
-         
+   devise :omniauthable, :omniauth_providers => [:facebook, :twitter]      
         
 end

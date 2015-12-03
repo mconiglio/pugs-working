@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   resources :posts
-  devise_for :users
+  devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
  root to: 'home#front'
 
   # The priority is based upon order of creation: first created -> highest priority.
