@@ -24,6 +24,14 @@ When /^I fill in password with "(.*?)"$/ do |value|
   fill_in('password'.gsub(' ', '_'), :with => value)
 end
 
+And /^I fill in title with "(.*?)"$/ do |value|
+  fill_in('Title'.gsub(' ', '_'), :with => value)
+end
+
+And /^I fill in date with "(.*?)"$/ do |value|
+  fill_in('Date'.gsub(' ', '_'), :with => value)
+end
+
 When /^I fill in "([^\"]*)" for "([^\"]*)"$/ do |value, field|
   fill_in(field.gsub(' ', '_'), :with => value)
 end
