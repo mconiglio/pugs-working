@@ -7,6 +7,8 @@ module NavigationHelpers
       
     when /the login\s?page/
         '/users/sign_in'
+    when /the reset password\s?page/
+        '/users/password/new'
     else
       begin
         page_name =~ /the (.*) page/
