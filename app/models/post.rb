@@ -1,5 +1,5 @@
 class Post < ActiveRecord::Base
-  include Shared::Callbacks
+  #include Shared::Callbacks
 
   belongs_to :user
   counter_culture :user

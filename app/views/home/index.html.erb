@@ -1,13 +1,4 @@
-<% title "PUGS" %>
-
-<br>
-<footer id='admin_link'>
-  <% if forem_admin? %>
-    <%= link_to t("area", :scope => "forem.admin"), forem.admin_root_path %>
-  <% end %>
-</footer>
-
-
+<% @title = "PUGS" %>
 
 
   <!-- Static navbar -->
@@ -21,8 +12,8 @@
           </button>
             <div id='forums_container'>
     <h1 id='forums_title'><%= yield(:title) %></h1>
-    <%= link_to('Logout', main_app.destroy_user_session_path, :method => :delete) %>   
-    <%= render @categories %>
+    <%= link_to('Logout', main_app.destroy_user_session_path, :method => :delete) %>
+    <%= link_to('Sign in', new_user_session_path) %>
   </div>
         </div>
         <div class="navbar-collapse collapse">

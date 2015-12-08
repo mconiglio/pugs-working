@@ -6,9 +6,10 @@ application up and running.
 Things you may want to cover:
 
 * Ruby version
-
+        Rails 4.2.4
+        Ruby 2.2.1p85 (2015-02-26 revision 49769) 
 * System dependencies
-
+    
 * Configuration
 
 * Database creation

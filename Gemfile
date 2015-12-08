@@ -26,11 +26,15 @@ group :development do
   gem 'letter_opener'
   gem 'guard'
   gem 'guard-rspec', '~> 4.2.8'
+  #gem 'rspec-rails'
 end
 
 
 group :development, :test do
   gem 'sqlite3'
+  gem 'cucumber-rails', :require => false
+  gem 'database_cleaner'
+  gem 'rspec-rails'
 end
 
 group :production do
@@ -55,6 +59,12 @@ gem 'counter_culture', '~> 0.1.33'
 gem 'faker'
 gem 'populator'
 gem 'auto_html'
+gem 'figaro'
+gem 'geocoder'
+gem 'activerecord-session_store'
+gem "omniauth-google-oauth2"
+gem 'omniauth-oauth2'
+gem 'devise-i18n'
 
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
