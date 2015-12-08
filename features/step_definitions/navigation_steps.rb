@@ -24,6 +24,14 @@ When /^I fill in password with "(.*?)"$/ do |value|
   fill_in('password'.gsub(' ', '_'), :with => value)
 end
 
+And /^I fill in title with "(.*?)"$/ do |value|
+  fill_in('Title'.gsub(' ', '_'), :with => value)
+end
+
+And /^I fill in date with "(.*?)"$/ do |value|
+  fill_in('Date'.gsub(' ', '_'), :with => value)
+end
+
 When /^I fill in "([^\"]*)" for "([^\"]*)"$/ do |value, field|
   fill_in(field.gsub(' ', '_'), :with => value)
 end
@@ -88,6 +96,6 @@ Then /^I should be on (.+)$/ do |page_name|
   current_path.should == path_to(page_name)
 end
 
-Then /^page should have (.+) message (.+)$/ do |type, text|
+Then /^the page should have (.+) message (.+)$/ do |type, text|
   page.has_css?("p.#{type}", :text => text, :visible => true)
 end
