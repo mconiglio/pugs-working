@@ -8,7 +8,7 @@ class HomeController < ApplicationController
     @activities = PublicActivity::Activity.where(owner_id: @friends).order(created_at: :desc).paginate(page: params[:page], per_page: 10)
   end
 
-  #def fronttest
+  #def front
   #  @activities = PublicActivity::Activity.order(created_at: :desc).paginate(page: params[:page], per_page: 10)
   #end
 
