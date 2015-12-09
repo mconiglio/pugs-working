@@ -1,0 +1,19 @@
+---
+development:
+  cloud_name: pugs
+  api_key: '868184135316771'
+  api_secret: J89H7wDdu0mrnT6nMW9R1s2gjF8
+  enhance_image_tag: true
+  static_image_support: false
+production:
+  cloud_name: pugs
+  api_key: '868184135316771'
+  api_secret: J89H7wDdu0mrnT6nMW9R1s2gjF8
+  enhance_image_tag: true
+  static_image_support: true
+test:
+  cloud_name: pugs
+  api_key: '868184135316771'
+  api_secret: J89H7wDdu0mrnT6nMW9R1s2gjF8
+  enhance_image_tag: true
+  static_image_support: false

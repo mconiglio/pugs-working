@@ -118,7 +118,7 @@ GEM
     font-awesome-rails (4.5.0.0)
       railties (>= 3.2, < 5.0)
     formatador (0.2.5)
-    friendly_id (5.0.5)
+    friendly_id (5.1.0)
       activerecord (>= 4.0.0)
     geocoder (1.2.12)
     gherkin (2.12.2)
@@ -315,7 +315,7 @@ GEM
       kgio (~> 2.6)
       rack
       raindrops (~> 0.7)
-    warden (1.2.3)
+    warden (1.2.4)
       rack (>= 1.0)
     will_paginate (3.0.7)
     xpath (2.0.0)
@@ -344,7 +344,7 @@ DEPENDENCIES
   faker
   figaro
   font-awesome-rails
-  friendly_id (~> 5.0.0)
+  friendly_id (~> 5.1.0)
   geocoder
   guard
   guard-rspec (~> 4.2.8)

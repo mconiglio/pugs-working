@@ -6,7 +6,7 @@ gem 'omniauth-twitter'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.4'
-
+gem 'friendly_id', '~> 5.1.0'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
 # Use Uglifier as compressor for JavaScript assets
@@ -46,7 +46,7 @@ end
 
 gem 'devise'
 gem 'carrierwave'
-gem 'friendly_id', '~> 5.0.0'
+
 
 gem 'will_paginate', '~> 3.0.6'
 gem 'public_activity'
@@ -59,6 +59,7 @@ gem 'counter_culture', '~> 0.1.33'
 gem 'faker'
 gem 'populator'
 gem 'auto_html'
+
 gem 'figaro'
 gem 'geocoder'
 gem 'activerecord-session_store'
