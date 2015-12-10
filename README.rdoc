@@ -5,6 +5,8 @@ application up and running.
 
 Things you may want to cover:
 
+used socify as a template
+
 * Ruby version
         Rails 4.2.4
         Ruby 2.2.1p85 (2015-02-26 revision 49769) 
@@ -15,6 +17,8 @@ Things you may want to cover:
 * Database creation
 
 * Database initialization
+
+        run rake db:migrate
 
 * How to run the test suite
 
