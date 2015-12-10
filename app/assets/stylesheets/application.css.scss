@@ -17,3 +17,7 @@
 //@import "variables";
 @import "jquery.datetimepicker";
 @import "*";
+
+.navbar-fixed-top, .navbar-fixed-bottom{
+    position: static;
+}
