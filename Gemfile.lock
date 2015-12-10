@@ -60,8 +60,12 @@ GEM
       coderay (>= 1.0.0)
       erubis (>= 2.6.6)
       rack (>= 0.9.0)
+    binding_of_caller (0.7.2)
+      debug_inspector (>= 0.0.1)
     bootstrap-sass (3.2.0.2)
       sass (~> 3.2)
+    bootstrap3-datetimepicker-rails (4.17.37)
+      momentjs-rails (>= 2.8.1)
     builder (3.2.2)
     capybara (2.5.0)
       mime-types (>= 1.16)
@@ -95,6 +99,7 @@ GEM
       nokogiri (~> 1.5)
       rails (>= 3, < 5)
     database_cleaner (1.5.1)
+    debug_inspector (0.0.2)
     devise (3.5.2)
       bcrypt (~> 3.0)
       orm_adapter (~> 0.1)
@@ -167,6 +172,8 @@ GEM
     mime-types (2.99)
     mini_portile2 (2.0.0)
     minitest (5.8.3)
+    momentjs-rails (2.10.6)
+      railties (>= 3.1)
     multi_json (1.11.2)
     multi_test (0.1.2)
     multi_xml (0.5.5)
@@ -335,7 +342,9 @@ DEPENDENCIES
   autoprefixer-rails
   bcrypt (~> 3.1.7)
   better_errors
+  binding_of_caller
   bootstrap-sass (~> 3.2.0)
+  bootstrap3-datetimepicker-rails (~> 4.17.37)
   capybara
   carrierwave
   cloudinary
@@ -354,6 +363,7 @@ DEPENDENCIES
   guard-rspec (~> 4.2.8)
   jquery-rails
   letter_opener
+  momentjs-rails (>= 2.9.0)
   omniauth-facebook
   omniauth-google-oauth2
   omniauth-oauth2

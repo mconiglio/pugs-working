@@ -1,11 +1,16 @@
+<div class = "form-group" >
 <%= form_for(@post) do |f| %>
   <div class="form-group">
     <%= f.label 'Start a PUG!' %><br>
       <%= f.text_area :name, class: 'form_control', placeholder: 'Title'%>
-      <%= select_date Date.today, prefix: :datetime %>
+      <div class="form-group">
+      <%= f.label 'When?' %>
+      <%= f.datetime_select :when, placeholder: "When?", class: 'form-control', id: "datetime"  %>
+      </div>
       <%= f.text_area :content, class: 'form-control', autofocus: true, 
           placeholder: 'What\'s up?' %>
       <%= f.file_field :attachment, class: 'form-control' %>
   </div>
   <%= f.submit :post, class: 'btn btn-primary'%>
 <% end %>
+</div>

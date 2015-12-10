@@ -13,10 +13,11 @@
  */
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import 'bootstrap-datetimepicker';
 @import "font-awesome";
-//@import "variables";
 @import "jquery.datetimepicker";
 @import "*";
+@import "main";
 
 .navbar-fixed-top, .navbar-fixed-bottom{
     position: static;

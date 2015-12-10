@@ -30,14 +30,17 @@ class User < ActiveRecord::Base
   friendly_id :name, use: [:slugged, :finders]
    
    def self.from_omniauth(auth)
-    where(provider: auth.provider, uid: auth.uid, name: auth.info.name).first_or_create do |user|
-    user.email = auth.info.email
-    user.password = Devise.friendly_token[0,20]
-    user.name = auth.info.name   # assuming the user model has a name
-    user.avatar = auth.info.image.gsub('http://', 'https://')# assuming the user model has an image
-    user.cover = auth.info.image
-    remote_avatar_url = auth.info.image.gsub('http://', 'https://')
+    #puts auth.inspect
+    user = User.where(email: auth.info.email).first
+    if user
+      user.update_attribute(:remote_avatar_url, auth.info.image.gsub('http://', 'https://'))
+    else
+      user = User.new(name: auth.info.name, email: auth.info.email,
+                      password: Devise.friendly_token[0, 20], remote_avatar_url: auth.info.image.gsub('http://', 'https://'))
+      user.skip_confirmation!
+      user.save
     end
+    user
    end
    
    def self.new_with_session(params, session)

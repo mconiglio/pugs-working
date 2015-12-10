@@ -1,10 +1,10 @@
 class HomeController < ApplicationController
-  before_action :set_user, except: :front
+  before_action :set_user
   respond_to :html, :js
 
   def front
     @post = Post.new
-    @friends = @user.all_following.unshift(@user)
+    #@friends = @user.all_following.unshift(@user)
     @activities = PublicActivity::Activity.where(owner_id: @friends).order(created_at: :desc).paginate(page: params[:page], per_page: 10)
   end
 

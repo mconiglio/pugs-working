@@ -15,15 +15,20 @@
 //= require bootstrap
 //= require bindWithDelay
 //= require jquery.datetimepicker.min
+//= require moment
+//= require bootstrap-datetimepicker
 //= require_tree .
 
 $(document).ready(function(){
-  $("#event_when").datetimepicker({
-    format:'Y/m/d H:i'
+ $("#post_when").datetimepicker({
+    inline: true,
+    sideBySide: true
   });
   $("#user_dob").datetimepicker({
-    timepicker:false,
+    inline: true,
+    sideBySide: true,
     format:'Y/m/d',
     maxDate:'0'
   });
 });
+

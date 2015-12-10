@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151209224844) do
+ActiveRecord::Schema.define(version: 20151210090443) do
 
   create_table "activities", force: :cascade do |t|
     t.integer  "trackable_id"
@@ -89,7 +89,8 @@ ActiveRecord::Schema.define(version: 20151209224844) do
     t.datetime "updated_at"
     t.float    "latitude"
     t.float    "longitude"
-    t.integer  "comments_count", default: 0, null: false
+    t.integer  "comments_count",  default: 0, null: false
+    t.integer  "cached_votes_up", default: 0, null: false
   end
 
   add_index "posts", ["user_id"], name: "index_posts_on_user_id"

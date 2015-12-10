@@ -11,8 +11,13 @@
 </p>
 
 <p>
+  <strong>Date:</strong>
+  <%= @post.when %>
+</p>
+
+<p>
   <strong>User:</strong>
-  <%= @post.user %>
+  <%= @post.user.name %>
 </p>
 
 <%= link_to 'Edit', edit_post_path(@post) %> |

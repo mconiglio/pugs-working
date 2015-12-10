@@ -8,7 +8,7 @@ class Post < ActiveRecord::Base
   has_one :location, :through => :user
   
   include PublicActivity::Model
-  tracked only: [:create, :like], owner: Proc.new{ |controller, model| model.user }
+  tracked owner: Proc.new{ |controller, model| model.user }
 
   default_scope -> { order('created_at DESC') }
 
@@ -18,6 +18,7 @@ class Post < ActiveRecord::Base
   validates_presence_of :user
   validates_presence_of :name
   validates_presence_of :when
+  validates_presence_of :content
   
   auto_html_for :content do
     html_escape
