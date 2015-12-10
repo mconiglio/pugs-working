@@ -8,7 +8,7 @@ class Post < ActiveRecord::Base
   has_one :location, :through => :user
   
   include PublicActivity::Model
-  tracked owner: Proc.new{ |controller, model| model.user }
+  tracked only:[:create, :like] ,owner: Proc.new{ |controller, model| model.user }
 
   default_scope -> { order('created_at DESC') }
 
