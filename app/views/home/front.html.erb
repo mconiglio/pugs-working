@@ -9,10 +9,10 @@
       <% if @activities.empty? %>
         <div class="well">
           <%= render('shared/no_resource', resources: 'Activities') %>
-        </div>
+        </div> 
       <% else %>
-        <%= render_activities(@activities, layout: '/shared/activity') %>
-      <% end %>
+        <%= render_activities(@activities, layout: '/shared/activity') %> 
+      <% end %> 
     </div>
     <%= render 'shared/paginate', resources: @activities %>
   </div>

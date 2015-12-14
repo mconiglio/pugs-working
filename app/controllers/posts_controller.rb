@@ -19,6 +19,7 @@ class PostsController < ApplicationController
   
   def create
     @post = current_user.posts.new(post_params)
+    @post.location = params[:location]
     if @post.save
       redirect_to root_path
     else
@@ -48,6 +49,6 @@ class PostsController < ApplicationController
   end
 
   def post_params
-    params.require(:post).permit(:name, :content, :attachment, :when)
+    params.require(:post).permit(:name, :content, :attachment, :location, :when)
   end
 end

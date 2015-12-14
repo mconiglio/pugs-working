@@ -13,7 +13,7 @@
       <%= "#{pluralize(age(@user.dob), 'year')} old" %>
     </h5>
   <% end %>
-  <% if @user.location.present?%>
+  <% if @user.location.present? %>
     <h5>
       <%= fa_icon 'map-marker' %>
       <%= @user.location %>

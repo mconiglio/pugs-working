@@ -80,9 +80,13 @@ Rails.application.configure do
   
   Rails.application.routes.default_url_options[:host] = 'pugs-working.herokuapp.com'
 
+  #set up ssl
+  config.to_prepare { Devise::SessionsController.force_ssl }
+  config.to_prepare { Devise::RegistrationsController.force_ssl }
+  config.to_prepare { Devise::PasswordsController.force_ssl }
 
   
-  config.action_mailer.default_url_options = { :host => 'pugs-working.herokuapp.com' }
+  config.action_mailer.default_url_options = {  protocol: 'https', :host => 'pugs-working.herokuapp.com' }
   
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.perform_deliveries = true

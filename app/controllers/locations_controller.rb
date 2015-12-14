@@ -4,6 +4,7 @@ class LocationsController < ApplicationController
   # GET /locations
   def index
     @locations = Location.all
+    respond_with(@locations)
   end
 
   # GET /locations/1
@@ -13,6 +14,7 @@ class LocationsController < ApplicationController
   # GET /locations/new
   def new
     @location = Location.new
+    respond_with(@location)
   end
 
   # GET /locations/1/edit
@@ -21,13 +23,13 @@ class LocationsController < ApplicationController
 
   # POST /locations
   def create
-    @location = Location.new(location_params)
-
-    if @location.save
-      redirect_to @location, notice: 'Location was successfully created.'
-    else
-      render :new
+    if params[:location].blank?
+      @location = request.location
+      @locations = Location.near([current_user.latitude, current_user.longitude], 50, :order => :distance)
+      params[:location] = @location
     end
+    respond_with(@location)
+    render :new
   end
 
   # PATCH/PUT /locations/1

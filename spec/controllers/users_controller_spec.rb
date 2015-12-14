@@ -1,16 +1,29 @@
 require 'rails_helper'
+require 'support/controller_macros'
+require 'supprtfactory_girl'
 
 RSpec.describe UsersController, type: :controller do
-
-    login_user
-    
-    it "should have current_user"do
-        subject.current_user.should_not be_nil
+  describe 'GET #front' do
+    context 'When user is logged in' do
+    with :user
+    before do
+      sign_in(user)
+      get :front
     end
-    
-    it "should get front" do
-        get "front"
-        response.should be_success
+      it {is.expexted.to respond_with :ok}
+      it {is.expected.to render_with_layout :application}
+      it {is.expected.to render_template :front}
     end
-    
+  end
+  
+  describe 'GET #show' do
+    with :user
+    before do
+      sign_in(user)
+      get :show
+    end
+      it {is.expected.to respond_with :ok}
+      it {is.expected.to render_with_layout :application}
+      it {is.expected.to render_template :show}
+  end
 end
