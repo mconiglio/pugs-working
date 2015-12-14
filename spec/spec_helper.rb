@@ -18,7 +18,7 @@
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 
 require 'spec_helper'
-require 'rspec/rails'
+require 'rails/all'
 # note: require 'devise' after require 'rspec/rails'
 require 'devise'
 
@@ -27,6 +27,8 @@ RSpec.configure do |config|
   # assertion/expectation library such as wrong or the stdlib/minitest
   # assertions if you prefer.
   config.include Devise::TestHelpers, :type => :controller
+  config.extend ControllerMacros, :type => :controller
+  config.extend FactoryGirl, :type => :controller
   config.mock_with :rspec do |c|
     c.syntax = [:should, :expect]
   end

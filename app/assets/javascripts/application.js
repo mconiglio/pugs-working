@@ -28,7 +28,6 @@ $(document).ready(function(){
     inline: true,
     sideBySide: true,
     format:'Y/m/d',
-    maxDate:'0'
   });
 });
 
