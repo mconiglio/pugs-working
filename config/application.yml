@@ -1,0 +1,26 @@
+# Add configuration values here, as shown below.
+#
+# pusher_app_id: "2954"
+# pusher_key: 7381a978f7dd7f9a1117
+# pusher_secret: abdc3b896a0ffb85d373
+# stripe_api_key: sk_test_2J0l093xOyW72XUYJHE4Dv2r
+# stripe_publishable_key: pk_test_ro9jV5SNwGb1yYlQfzG17LHK
+#
+# production:
+#   stripe_api_key: sk_live_EeHnL644i6zo4Iyq4v1KdV9H
+#   stripe_publishable_key: pk_live_9lcthxpSIHbGwmdO941O1XVU
+
+GMAIL_DOMAIN: 'smtp.gmail.com'
+GMAIL_USERNAME: 'PugsApp@gmail.com'
+GMAIL_PASSWORD: 'Cs445Pugs'
+
+FB_TEST_ID: '1504047866562116'
+FB_TEST_SECRET: '382897009840f0c84b3a7236a8ac5a48'
+
+TWIT_ID: 'SJO173X1bUzweVQbg1rfYEETH'
+TWIT_SECRET: '64ni5uDEy7r5dy1Xt1DCMOHvEI9jeB1A3wI4QZ7GGTJXp9l7f7'
+
+GOOGLE_ID: '492924492104-a2gb0ks13k8s8pkgoe74qe5s93mg3suu.apps.googleusercontent.com'
+GOOGLE_SECRET: 'NQmQa7IxYFZb2ANB1X3OhWDg'
+
+BING_KEY: "AmcgMvy73bSpIgtBlNL_6Lqd7hT0Qa7NGIk3meu4TZ6G08vz9uh0jO_S9xkLj6PY"
