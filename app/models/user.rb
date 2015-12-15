@@ -32,16 +32,19 @@ class User < ActiveRecord::Base
    def self.from_omniauth(auth)
     #puts auth.inspect
     user = User.where(email: auth.info.email).first
-    result = Geocoder.search(user.current_sign_in_ip).first
-    addr = [result.city,result.state].compact.join(', ')
     if user
       user.update_attribute(:remote_avatar_url, auth.info.image.gsub('http://', 'https://'))
+      result = Geocoder.search(user.current_sign_in_ip).first
+      addr = [result.city,result.state].compact.join(', ')
       if user.location != addr
         user.location = addr
       end
     else
       user = User.new(name: auth.info.name, email: auth.info.email,
-                      password: Devise.friendly_token[0, 20], location: addr , remote_avatar_url: auth.info.image.gsub('http://', 'https://'))
+                      password: Devise.friendly_token[0, 20], remote_avatar_url: auth.info.image.gsub('http://', 'https://'))
+      result = Geocoder.search(user.current_sign_in_ip).first
+      addr = [result.city,result.state].compact.join(', ')
+      user.location = addr
       user.skip_confirmation!
       user.save
     end
