@@ -13,7 +13,9 @@ used socify as a template
 * System dependencies
     
 * Configuration
-
+        easiest way is to clone the repository in cloud 9 "c9.io"
+        run bundle install
+        "Facebook login will not work unless I add you as a tester and add the callback url"
 * Database creation
 
 * Database initialization
@@ -21,7 +23,7 @@ used socify as a template
         run rake db:migrate
 
 * How to run the test suite
-
+        rspec 
 * Services (job queues, cache servers, search engines, etc.)
 
 * Deployment instructions
