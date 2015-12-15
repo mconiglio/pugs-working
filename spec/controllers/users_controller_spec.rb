@@ -1,29 +1,42 @@
 require 'rails_helper'
-require 'support/controller_macros'
-require 'supprtfactory_girl'
+require 'support/controller_macros.rb'
+require 'support/factory_girl.rb'
 
 RSpec.describe UsersController, type: :controller do
-  describe 'GET #front' do
-    context 'When user is logged in' do
-    with :user
-    before do
-      sign_in(user)
-      get :front
-    end
-      it {is.expexted.to respond_with :ok}
-      it {is.expected.to render_with_layout :application}
-      it {is.expected.to render_template :front}
-    end
-  end
-  
+  login_user
+ 
   describe 'GET #show' do
     with :user
     before do
-      sign_in(user)
-      get :show
+      #login_user
+      
+      get :show, id: 1
     end
-      it {is.expected.to respond_with :ok}
-      it {is.expected.to render_with_layout :application}
-      it {is.expected.to render_template :show}
+      it {is_expected.to respond_with :ok}
+      it {is_expected.to render_with_layout :application}
+      it {is_expected.to render_template :show}
   end
+  
+  describe 'GET #destroy'do
+     with :user
+    before do
+      #login_user
+      delete :deactivate, id: 1
+    end
+      it {is_expected.to respond_with :ok}
+      it {is_expected.to render_with_layout :application}
+      it {is_expected.to render_template :deactivate}
+  end
+  
+  describe 'GET #edit' do
+   with :user
+    before do
+      #login_user
+      get :edit, id: 1
+    end
+      it {is_expected.to respond_with :ok}
+      it {is_expected.to render_with_layout :application}
+      it {is_expected.to render_template :edit}
+  end
+  
 end

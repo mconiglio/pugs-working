@@ -17,21 +17,14 @@
 #
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 
-require 'spec_helper'
-require 'rails/all'
-# note: require 'devise' after require 'rspec/rails'
-require 'devise'
-
 RSpec.configure do |config|
   # rspec-expectations config goes here. You can use an alternate
   # assertion/expectation library such as wrong or the stdlib/minitest
   # assertions if you prefer.
-  config.include Devise::TestHelpers, :type => :controller
-  config.extend ControllerMacros, :type => :controller
-  config.extend FactoryGirl, :type => :controller
-  config.mock_with :rspec do |c|
-    c.syntax = [:should, :expect]
-  end
+  config.before(:all) do
+  FactoryGirl.reload
+end
+
   config.expect_with :rspec do |expectations|
     # This option will default to `true` in RSpec 4. It makes the `description`
     # and `failure_message` of custom matchers include text for helper methods
@@ -40,7 +33,6 @@ RSpec.configure do |config|
     #     # => "be bigger than 2 and smaller than 4"
     # ...rather than:
     #     # => "be bigger than 2"
-    expectations.syntax = [:should, :expect]
     expectations.include_chain_clauses_in_custom_matcher_descriptions = true
   end
 
@@ -52,6 +44,7 @@ RSpec.configure do |config|
     # `true` in RSpec 4.
     mocks.verify_partial_doubles = true
   end
+  
 
 # The settings below are suggested to provide a good initial experience
 # with RSpec, but feel free to customize to your heart's content.
@@ -62,6 +55,7 @@ RSpec.configure do |config|
   # get run.
   config.filter_run :focus
   config.run_all_when_everything_filtered = true
+  
 
   # Allows RSpec to persist some state between runs in order to support
   # the `--only-failures` and `--next-failure` CLI options. We recommend
