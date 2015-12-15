@@ -17,7 +17,7 @@
 //= require jquery.datetimepicker.min
 //= require moment
 //= require bootstrap-datetimepicker
-//= require_tree .
+
 
 $(document).ready(function(){
  $("#post_when").datetimepicker({
