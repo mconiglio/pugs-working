@@ -6,11 +6,11 @@ FactoryGirl.define do
     password_confirmation "password"
     confirmed_at Date.today
   end
-  
+ 
   factory :user do
-    name {Faker::User.name }
+    name {Faker::Name.name }
     email {Faker::Internet.email }
-    encrypted_password {Faker::Devise.encrypted_password }
+    password {Faker::Internet.password(8) }
     created_at Date.today
     updated_at Date.today
   end

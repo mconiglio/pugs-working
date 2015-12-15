@@ -38,6 +38,9 @@ group :development, :test do
   gem 'cucumber-rails', :require => false
   gem 'database_cleaner'
   gem 'rspec-rails'
+  gem 'factory_girl_rspec'
+  gem "shoulda-kept-respond-with-content-type"
+  #gem 'shoulda-matchers', '~> 3.0'
   gem 'capybara'
 end
 
@@ -63,7 +66,7 @@ gem 'counter_culture', '~> 0.1.33'
 gem 'faker'
 gem 'populator'
 gem 'auto_html'
-gem 'factory_girl'
+#gem 'factory_girl'
 
 gem 'figaro'
 gem 'geocoder'
