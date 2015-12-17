@@ -1,13 +1,11 @@
 <div id="comment-<%= comment.id %>">
   <div class="info">
-    <%= render 'shared/avatar', user: comment.user %>
-    <h4 class="name"><%= comment.user.name %></h4>
-  </div>
-  <div class="content">
-    <div class="row">
-      <span class="text"><%= comment.comment_html %></span>
-    </div>
+    <%= render partial: 'shared/avatar', locals: { user: comment.user, size: '50x50'} %>
+    <%= link_to comment.user.name, comment.user, class: "name" %>
+    <span class="text"><%= comment.comment_html %></span>
     <div class="pull-right">
+      <%= fa_icon 'clock-o' %>
+      <%= time_ago_in_words(comment.created_at) %> ago
       <% if belongs_to_user?(comment) %>
         <%= link_to comment_path(comment), method: :delete, class: 'btn btn-danger btn-sm', remote: true do %>
           <% fa_icon 'trash' %>

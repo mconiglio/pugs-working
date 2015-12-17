@@ -123,8 +123,8 @@ a:after {
 /* Helpers */
 
 .mt {
-	margin-top: 40px;
-	margin-bottom: 40px;
+    margin-top: 40px;
+    margin-bottom: 40px;
 }
 
 .pt {
@@ -149,59 +149,58 @@ a:after {
 	padding-top: 50px;
 	padding-bottom: 50px; 
 	border-radius: 25px;
-	
 }
 
 #footer p {
-	color: white;
+    color: white;
 }
 
 #footer h4 {
-	color: white;
-	text-transform: uppercase;
-	padding-bottom: 20px;
+    color: white;
+    text-transform: uppercase;
+    padding-bottom: 20px;
 }
 
 
 /* +++++ Color Wraps / Blog Page +++++ */
 
 #grey {
-	padding-top: 60px;
-	padding-bottom: 60px;
-	background-color: #f2f2f2;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background-color: #f2f2f2;
 }
 
 #white {
-	padding-top: 60px;
-	padding-bottom: 60px;
-	background-color: #ffffff;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background-color: #ffffff;
 }
 
 
 /* Form group*/
 /* Blog Date*/
 bd {
-	font-size: 12px;
-	text-transform: uppercase;
-	color: #d2d2d2;
-	font-weight: 700;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: #d2d2d2;
+    font-weight: 700;
 }
 
 /* Blog Author*/
 ba {
-	font-size: 12px;
-	text-transform: uppercase;
+    font-size: 12px;
+    text-transform: uppercase;
 }
 
 /* Blog Quote */
 .bq {
-	font-size: 22px;
-	padding-top: 30px;
+    font-size: 22px;
+    padding-top: 30px;
 }
 
 /* Blog Tags */
 bt {
-	font-size: 12px;
+    font-size: 12px;
 }
 
 /* ================== PORTFOLIO IMAGES HOVER EFFECT ================== */
@@ -225,11 +224,11 @@ bt {
     }
 
 .zoom2 {
-	opacity: 1;
+    opacity: 1;
 }
 
 .zoom2:hover {
-	opacity: 0.5;
+    opacity: 0.5;
 }
 
 /* glyphicon Configuration */
@@ -237,4 +236,37 @@ bt {
 .glyphicon {
 	font-size: 10px;
 	color: #1abc9c;
+}
+
+.comments {
+    .name {
+        color: #428bca;
+        text-decoration: none;
+    }
+    .text p {
+        font-size: 14px;
+        line-height: 24px;
+        margin-bottom: 0px;
+    }
+    .avatar {
+        float: left;
+        margin-right: 10px;
+    }
+}
+
+.points {
+    margin-left: 0px;
+    margin-right: 0px;
+    vertical-align: middle;
+    .actions-buttons {
+        padding-bottom: 3px;
+    }
+}
+
+.activity {
+    background-color: #eee;
+    border-radius: 6px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 15px;
 }
