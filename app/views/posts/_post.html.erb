@@ -30,8 +30,10 @@
 </div>
 <%= render 'shared/actions', resource: post %>
 <div class="comments">
+  <h4>Comments</h4>
+  <hr>
   <%= render post.comments %>
-  <div class="collapsable">
+  <div id="comment-form-<%= post.id %>" class="collapse" style="height: 0px;">
     <%= render 'comments/form', commentable: post %>
   </div>
 </div>

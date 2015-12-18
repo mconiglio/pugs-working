@@ -5,7 +5,7 @@
         <%= render 'likes/form', likeable: resource %>
       </div>
       <div class="col-xs-6 comment">
-        <button type="button" class="btn btn-block" data-toggle="collapse" data-target=".comments">
+        <button type="button" class="btn btn-block" data-toggle="collapse" data-target="#comment-form-<%= resource.id %>">
           <%= fa_icon 'comment' %> comment
         </button>        
       </div>
